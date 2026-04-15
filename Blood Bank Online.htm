@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"><!--<![endif]--><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
+    <title>Blood Bank Online</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <!-- 
+    Authentic Template
+    http://www.templatemo.com/tm-412-authentic
+    -->
+    <meta name="viewport" content="width=device-width">        
+    <link rel="stylesheet" href="Blood%20Bank%20Online_files/templatemo_main.css">
+    <link rel="stylesheet" href="Blood%20Bank%20Online_files/datepicker.css">
+	<link rel="stylesheet" href="Blood%20Bank%20Online_files/dataTables.css">
+	<link rel="stylesheet" href="Blood%20Bank%20Online_files/jquery.css">
+    <!-- templatemo 412 authentic -->
+</head>
+<body>
+    <div id="main-wrapper">
+            <!--[if lt IE 7]>
+                <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a rel="nofollow" href="http://browsehappy.com">upgrade your browser</a> or <a rel="nofollow" href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+                <![endif]-->
+
+                <div class="container">
+                    <!-- Static navbar -->
+                    <div class="navbar navbar-default" role="navigation">
+                        <div class="container-fluid box-shados">
+                          <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                              <span class="sr-only">Toggle navigation</span>
+                              <span class="icon-bar"></span>
+                              <span class="icon-bar"></span>
+                              <span class="icon-bar"></span>
+                          </button>
+                      </div>
+                      <div class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                          <li><a class="index" href="http://www.bloodbankonline.org/index.php"><i class="fa fa-home" aria-hidden="true"></i>Home</a></li>
+						   
+							<li><a class="Register" href="http://www.bloodbankonline.org/Register.php"><i class="fa fa-phone" aria-hidden="true"></i>Register</a></li>  
+						                            <li><a class="WhyDonateBlood" href="http://www.bloodbankonline.org/WhyDonateBlood.php"><i class="fa fa-question-circle" aria-hidden="true"></i>Why donate blood?</a></li>
+                          <li><a class="WhoNeedsBlood" href="http://www.bloodbankonline.org/WhoNeedsBlood.php"><i class="fa fa-user" aria-hidden="true"></i>Who needs blood?</a></li>
+                          <li><a class="TipsOnDonating" href="http://www.bloodbankonline.org/TipsOnDonating.php"><i class="fa fa-book" aria-hidden="true"></i>Tips on donating</a></li>
+                          <li><a class="MostNeededBlood" href="http://www.bloodbankonline.org/MostNeededBlood.php"><i class="fa fa-tint" aria-hidden="true"></i>Most needed blood</a></li>
+                          <li><a class="ReferFriend" href="http://www.bloodbankonline.org/ReferFriend.php"><i class="fa fa-users" aria-hidden="true"></i>Refer a friend</a></li>
+                          <li><a class="ContactUs" href="http://www.bloodbankonline.org/ContactUs.php"><i class="fa fa-phone" aria-hidden="true"></i>Contact Us</a></li>
+						                         </ul>
+                  </div><!--/.nav-collapse -->
+              </div><!--/.container-fluid -->
+	
+	
+	
+          </div>
+          <div class="image-section">
+            <div class="image-container">
+                <img src="Blood%20Bank%20Online_files/Tue2014_BackgroundBokeh_3.jfif" id="templatemo-page1-img" class="main-img inactive" alt="Home">               
+            </div>
+        </div>
+   
+		
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="banner-main box-shados">               
+				 <div class="col-sm-4">
+						<div class="logo">
+						<div class="col-sm-12">
+							<img src="Blood%20Bank%20Online_files/logo_1.png" alt="Contact">						
+						</div>
+						</div>						
+					</div>
+			
+					  
+					<div class="col-sm-8">
+					 <div class="col-sm-12">					 
+							<h4 id="login_title_top">Donor Login</h4>
+						</div>
+						
+							 <form role="form" name="loginForm" id="loginForm" method="post" onsubmit="return LoginAccessDonar();" enctype="multipart/form-data">
+                         
+						 <div class="col-sm-4">
+						   <div class="form-group">
+                                <!--<label for="contact_name">Name:</label>-->
+                                <input required="" id="user_name_donar" name="user_name_donar" class="form-control form-control-top" placeholder="Email ID" type="text">
+                                <input id="BloodLoginForm" value="login" type="hidden">
+                            </div>
+						</div>
+						
+						<div class="col-sm-4" id="login_pass_div">
+                            <div class="form-group">
+                                <!--<label for="contact_email">Email:</label>-->
+                                <input id="password_donar" name="password_donar" class="form-control form-control-top" placeholder="Password" type="password">
+                            </div>           
+                        </div>   
+					<div class="col-sm-4">						
+							<div id="loader_for_verify_login" class="pull-left display_no"><img style="width:30px;" src="Blood%20Bank%20Online_files/processing.gif"></div>
+                            <button id="for_submit_login" type="submit" class="btn btn-primary pull-left">Submit</button> &nbsp;	
+							<button href="#" id="login_to_user" onclick="Forgot_my_pass('login');" class="btn-new link-forgot display_no">Go to login</button>							
+							<button href="#" id="Forgot_my_password" onclick="Forgot_my_pass('forgot');" class="btn-new link-forgot">Forgot Password?</button>
+							
+							
+                        
+					</div></form>
+					</div>
+					 					 					
+                </div>
+            </div>
+        </div>  <!---->
+		
+		
+		
+		 <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="box-shados"> 
+			  <div class="col-lg-12 search-split">
+					<h4> Find a Donor</h4>					
+					 <form role="form" method="POST" action="BloodDonors.php" name="DonarFilterForm" id="DonarFilterForm" enctype="multipart/form-data">					
+                           <div class="col-sm-2">
+						   <div class="form-group ">
+                               <select onchange="GetState(this.value,'ddlstStateTop','');" class="form-control form-control-top" required="" autocomplete="off" id="ddlCountryTop" name="ddlCountryTop">
+																					<option selected="selected" value="5">India</option>
+																	</select>
+							   
+                            </div>
+                           </div> 
+						    <div class="col-sm-2">
+							 <div class="form-group">
+								 <select onchange="GetCitys(this.value,'ddlstCityTop');" class="form-control form-control-top" required="" autocomplete="off" id="ddlstStateTop" name="ddlstStateTop"><option selected="selected" value="">-Select State-</option><option value="1">Andhra Pradesh</option><option value="2">Arunachal Pradesh</option><option value="3">Assam</option><option value="4">Bihar</option><option value="5">Chandigarh</option><option value="6">chhattisgarh</option><option value="7">Delhi</option><option value="8">Goa</option><option value="9">Gujarat</option><option value="10">Haryana</option><option value="11">Himachal Pradesh</option><option value="12">Jammu and Kashmir</option><option value="13">Jharkhand</option><option value="14">Karnataka</option><option value="15">Kerala</option><option value="16">Madhya Pradesh</option><option value="17">Maharashtra</option><option value="18">Manipur</option><option value="19">Meghalaya</option><option value="20">Mizoram</option><option value="21">Nagaland</option><option value="0">No State</option><option value="22">Orissa</option><option value="23">Pondichery</option><option value="24">Punjab</option><option value="25">Rajasthan</option><option value="26">Sikkim</option><option value="27">Tamil Nadu</option><option value="28">Tripura</option><option value="29">Uttar Pradesh</option><option value="30">Uttaranchal</option><option value="31">West Bengal</option></select>
+								                         
+                            </div>
+                             </div>
+							<div class="col-sm-2">
+                            <div class="form-group ">
+                              <select class="form-control form-control-top" required="" autocomplete="off" id="ddlstCityTop" name="ddlstCityTop">
+									<option selected="selected" value="">-Select City/District-</option>
+								</select>  
+                            </div>
+                            </div>
+							<div class="col-sm-2">
+                            <div class="form-group ">
+                               <select id="ddlGroupHeadTOP" name="ddlGroupHeadTOP" required="" class="form-control form-control-top">
+								<option selected="selected" value="">-Select Blood Group-</option>
+									<!--<option value="ALL">ALL</option>--->
+								<option value="A1+">A1+</option>
+								<option value="A1-">A1-</option>
+								<option value="A2+">A2+</option>
+								<option value="A2-">A2-</option>
+								<option value="B+">B+</option>
+								<option value="B-">B-</option>
+								<option value="A1B+">A1B+</option>
+								<option value="A1B-">A1B-</option>
+								<option value="A2B+">A2B+</option>
+								<option value="A2B-">A2B-</option>
+								<option value="AB+">AB+</option>
+								<option value="AB-">AB-</option>
+								<option value="O+">O+</option>
+								<option value="O-">O-</option>
+								<option value="A+">A+</option>
+								<option value="A-">A-</option>
+								<option value="Bombay Group">Bombay Group</option>
+								</select>
+									 
+                            </div> 
+							</div>
+							<div class="col-sm-2">
+							
+							<button type="submit" class="btn btn-primary pull-left">Search</button>
+							</div>
+                        </form>						
+					</div>
+					
+					
+					
+					
+                </div>
+            </div>
+        </div>
+		
+		 <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 templatemo-content-wrapper">
+                <div class="templatemo-content">        
+<section id="templatemo-page1-text">
+<div class="col-sm-12 col-md-12">
+	<div class="row">
+		<div class="col-sm-12 col-md-12">
+			<h2> Welcome to Blood Bank</h2>							
+		</div>
+		<div class="clearfix"></div>
+		<br>
+	</div>
+	<div class="col-sm-10 col-md-10">
+		
+		<div><img src="Blood%20Bank%20Online_files/vn.jfif" style="float:left"></div><div>
+		<p>INODA WELCOMES YOU to the Blood Bank database in our WebSite. If 
+you are a donor , We appreciate you signing up online as a Donor. If you
+ need blood we are happy to serve you.</p>
+		<p>This blood donor list is hosted by <a href="http://www.easyinsuranceindia.com/" target="_blank">easyinsuranceindia.com</a>
+ on behalf of INODA (hereinafter referred to as Organizers) as a public 
+service without any profit motive. This is a free service.</p>
+		<p>While the Organisers have taken all steps to obtain accurate and 
+up-to-date information of potential blood donors, the Organisers and ICM
+ Computers do not guarantee accuracy of the information contained herein
+ or the suitability of the persons listed as any liability for direct or
+ consequential damage to any person using this blood donor list 
+including loss of life or damage due to infection of any nature arising 
+out of blood transfusion from persons whose names have been listed in 
+this website.</p>
+		<div class="home_quote">We request donors to update contact details regularly.</div>
+		<br>
+		<a href="http://www.easyinsuranceindia.com/" target="_blank"><img class="advataice-image" src="Blood%20Bank%20Online_files/ad-icm1.jfif" alt="icmindia.com"></a>
+		<a href="http://www.easyinsuranceindia.com/" target="_blank"><img class="advataice-image" src="Blood%20Bank%20Online_files/ad-icm.jfif" alt="easyinsuranceindia.com"></a>
+		</div>
+</div>
+ <div class="col-sm-2 col-md-2"><a href="http://www.easyinsuranceindia.com/" target="_blank"><img class="img-rightside" src="Blood%20Bank%20Online_files/ad-easy.jfif" alt="easyinsuranceindia.com"> </a></div>
+</div>
+
+<!--<div style="color:#FFF;">
+		 <div class="row">
+			<div class="col-sm-12 col-md-12"><h3 class="text-info">What Is Insurance</h3></div>
+			<div class="col-sm-5 col-md-5 text-left text-danger"><span class="text-muted">In</span> Health <span class="text-muted">|</span> ICM Transfer</div>
+			<div class="col-sm-7 col-md-7 text-right text-danger">5 Answer <span class="text-muted">|</span> 29 Views <span class="text-muted">|</span> 1222 Days <span class="text-muted">|</span> <span class="text-success">Answered writen id is ICM</span></div>
+		
+			<div class="col-sm-12 col-md-12 ">While the Organisers have taken all steps to obtain accurate and up-to-date information of potential blood donors, the Organisers and ICM Computers do not guarantee accuracy of the information .. <span class="text-muted">Read More</span></div>		
+			<div class="col-sm-12 col-md-12"><span class="text-muted">Answered by</span> sujitha <span class="text-muted">|</span> 13698 Days Ago</div>
+		</div> 
+	</div>-->
+</section></div>
+
+    </div><!-- /.templatemo-content -->  
+</div><!-- /.templatemo-content-wrapper --> 
+
+<div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 footer templatemo-content-wrapper">
+        <div class="footer-wrapper">
+          <!--   <p class="social-icons">
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-google-plus"></i></a>
+                <a href="#"><i class="fa fa-youtube"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+            </p> -->
+            <p id="tm-copyright">
+            	Copyright © 2017 - Blood Bank Online  All Rights Reserved | <a href="http://www.bloodbankonline.org/privacypolicy.php">Privacy Policy</a> | <a href="http://www.bloodbankonline.org/termsofuse.php">Terms of use</a>
+            </p>
+			<p class="copy-right">Sponsored by <a href="http://www.easyinsuranceindia.com/" target="_blank">easyinsuranceindia.com</a>. 
+		  Powered by <a href="http://www.icmindia.com/" target="_blank"> ICM Computers</a></p>
+            </div>                    
+        </div><!-- /.footer --> 
+</div>               
+</div> <!-- /.container -->
+</div><!-- /#main-wrapper -->
+<!-- /.row --> 
+<!-- 
+<div id="preloader">
+    <div id="status">&nbsp;</div>
+</div>/#preloader -->
+<style>
+.index{
+		color: yellow !important;			
+	}
+</style>
+<script src="Blood%20Bank%20Online_files/jquery_002.js"></script>
+<script src="Blood%20Bank%20Online_files/jquery.js"></script>
+<script src="Blood%20Bank%20Online_files/bootstrap.js"></script>
+<script src="Blood%20Bank%20Online_files/templatemo_script.js"></script>
+<script src="Blood%20Bank%20Online_files/bootstrap-datepicker.js"></script>
+<script src="Blood%20Bank%20Online_files/dataTables.js"></script>
+<script src="Blood%20Bank%20Online_files/jquery_003.js"></script>
+<script>
+		
+		GetState('5','ddlstStateTop','');	
+				
+				
+				
+</script>
+
+<div style="left: 0px; top: 0px; overflow: hidden; margin: 0px; padding: 0px; height: 754px; width: 1519px; z-index: -999999; position: fixed;" class="backstretch"><img src="Blood%20Bank%20Online_files/Tue2014_BackgroundBokeh_3.jfif" style="position: absolute; margin: 0px; padding: 0px; border: medium none; width: 1519px; height: 854.438px; max-height: none; max-width: none; z-index: -999999; left: 0px; top: -50.2188px;"></div></body></html>
